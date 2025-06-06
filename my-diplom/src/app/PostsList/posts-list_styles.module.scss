@@ -1,0 +1,29 @@
+.container {
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+    // border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.posts {
+    width: 100%;
+    &__middleWrapper {
+        display: flex;
+    }
+    &__middle {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+        width: 100%;
+        > div { 
+            flex: 0 0 calc(32%); // Три элемента в ряд с учетом отступа
+            box-sizing: border-box;
+        }
+    }
+}
+.posts__little {
+    width: 30%;
+}

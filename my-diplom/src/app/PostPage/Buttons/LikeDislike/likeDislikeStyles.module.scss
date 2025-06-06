@@ -1,0 +1,20 @@
+.wrapperBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.likeBtn,
+.dislikeBtn {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+}

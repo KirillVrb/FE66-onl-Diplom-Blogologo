@@ -1,0 +1,96 @@
+.headerContainer {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.2);
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.headerBurger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    cursor: pointer;
+
+    &LineUp,
+    &LineMiddle,
+    &LineDown {
+        width: 20px;
+        border-bottom: 2px solid #ffffff;
+        margin-bottom: 5px;
+        transition: all 0.3s ease;
+    }
+
+    &LineDown {
+        margin-bottom: 0;
+    }
+}
+
+.crossUp {
+    transform: rotate(45deg);
+    position: relative;
+    top: 4px;
+}
+
+.crossDown {
+    transform: rotate(-45deg);
+    position: relative;
+    bottom: 3px;
+}
+
+.hidden {
+    display: none;
+}
+
+.headerWrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.headerSearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    padding: 48px 15px;
+    cursor: pointer;
+}
+
+.headerLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 56px;
+    max-height: 56px;
+    padding: 48px 15px;
+    border-left: 1px solid rgba(49, 48, 55, 1);
+    cursor: pointer;
+}
+
+.burgerProfile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    // background-color: #3d21b0;
+    padding: 7px 11px;
+    font-size: 16px;
+    line-height: 34px;
+    font-weight: 600;
+    color: #ffffff;
+    // border: 1px solid #ffffff;
+
+}
+
+.burgerInitials {
+    padding: 7px 13px;
+    background-color: rgb(148, 126, 235)
+}
