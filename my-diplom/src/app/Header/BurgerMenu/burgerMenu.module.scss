@@ -1,0 +1,86 @@
+.burgerContainer {
+    position: absolute;
+    max-width: 30%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: red;
+}
+
+.burgerWrapperUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.burgerProfile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #3d21b0;
+    padding: 15px 20px;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+
+}
+
+.burgerInitials {
+    padding: 10px;
+    background-color: rgb(148, 126, 235)
+}
+
+.burgerHome,
+.burgerAddPost {
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+    padding: 25px 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.burgerWrapperDown {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.burgerTheme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.burgerLight,
+.burgerDark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 106px;
+    height: 78px;
+    padding: 25px 35px;
+    cursor: pointer;
+
+    &:last-of-type {
+        border-left: 2px solid rgba(0, 0, 0, 0.2);
+    }
+}
+
+.burgerLogout {
+    width: 100%;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+    padding: 25px 67px;
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+}

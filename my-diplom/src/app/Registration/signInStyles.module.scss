@@ -1,0 +1,52 @@
+.signInContainer {
+    max-width: 1000px;
+    width: 100%;
+    margin: 50px auto;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 50px;
+}
+
+.signInLinkBack {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.signInForm {
+    margin: 50px auto 200px;
+    width: 50%;
+    padding: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.wrapperEmail,
+.wrapperPassword {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5px;
+    margin-bottom: 30px;
+}
+
+.wrapperPassword {
+    margin-bottom: 10px;
+}
+
+.emailInput, 
+.passwordInput {
+    width: 100%;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.signInForgot {
+    display: block;
+    margin-bottom: 40px;
+}
