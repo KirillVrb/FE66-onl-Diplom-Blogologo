@@ -2,9 +2,9 @@ import { JSX } from "react"
 
 export type PostType = {
     id: number
-    image: string
-    text: string
-    date: string
+    image_url: string
+    summary: string
+    published_at: string
     lesson_num?: number
     title: string
     author?: number

@@ -25,12 +25,14 @@ const Header = () => {
     return (
         <>
             <div className={style.headerContainer}>
-                <button className={style.headerBurger} onClick={toggleMenu}>
+                <Link href="/" className={style.headerBurger}>
+                {/* <button className={style.headerBurger} onClick={toggleMenu}> */}
                     <SvgLogo />
                     {/* <div className={`${style.headerBurgerLineUp} ${openMenu ? style.crossUp : ''}`}></div>
                     <div className={`${style.headerBurgerLineMiddle} ${openMenu ? style.hidden : ''}`}></div>
                     <div className={`${style.headerBurgerLineDown} ${openMenu ? style.crossDown : ''}`}></div> */}
-                </button>
+                {/* </button> */}
+                </Link>
                 <div className={style.headerWrapper}>
                     <button className={style.headerSearch}><SvgSearch /></button>
                     {profileEmail ? <button className="cursor-pointer" onClick={handleLogout}>

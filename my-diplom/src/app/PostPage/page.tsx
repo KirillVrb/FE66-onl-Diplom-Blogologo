@@ -13,7 +13,7 @@ const PostPage = () => {
         <>
             <div className={style.postPost}>
                 {postsList?.length > 0 && (
-                    <Post key={postsList[1].id} image={postsList[1].image} text={postsList[1].text} date={postsList[1].date} title={postsList[1].title} />
+                    <Post key={postsList[0].id} image={postsList[0].image_url} text={postsList[0].summary} date={postsList[0].published_at} title={postsList[0].title} />
                 )} 
             </div> 
             <Switching leftPointer={"Prev"} rightPointer={"Next"} children={<span></span>}/>

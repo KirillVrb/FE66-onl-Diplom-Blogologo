@@ -32,7 +32,7 @@ const PostsList = (props: PostsType) => {
                 <div className={styles.posts__middleWrapper}>
                     <div className={styles.posts__middle}>
                         {props.posts.map(post => (
-                            <MiddlePost key={post.id} image={post.image} text={post.text} date={post.date} title={post.title} id={post.id} />
+                            <MiddlePost key={post.id} image_url={post.image_url} summary={post.summary} published_at={post.published_at} title={post.title} id={post.id} />
                         ))}
                     </div>
                 </div>

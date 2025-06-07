@@ -3,9 +3,12 @@ import { BLOG_PATH, ERROR_MSG, URL_API } from "./consts";
 
 type PostType = {
     id: number
-    image: string
-    text: string
-    date: string
+    image_url: string
+    // image: string
+    summary: string
+    // text: string
+    published_at: string
+    // date: string
     lesson_num: number
     title: string
     author: number
@@ -21,7 +24,8 @@ const useFetchPosts = () => {
     useEffect(() => {
         ;(async () => {
                 try {
-               const response = await fetch(URL_API + BLOG_PATH + '?limit=20&offset=10');
+               const response = await fetch('https://api.spaceflightnewsapi.net/v4/articles/' + '?limit=12&offset=10');   
+              //  const response = await fetch(URL_API + BLOG_PATH + '?limit=12&offset=10');
                if (!response.ok) throw new Error(ERROR_MSG);
 
                const data = await response.json();

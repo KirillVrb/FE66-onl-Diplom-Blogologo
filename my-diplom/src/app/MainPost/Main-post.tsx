@@ -25,7 +25,7 @@ const MainPost = (props: PostType) => {
         dispatch(fetchPosts());
     }, [dispatch]);
     const handleImgClick = () => {
-        dispatch(openSelectedImg(props.image))
+        dispatch(openSelectedImg(props.image_url))
         };
 
     const handleToggleFavorite = (post: PostType) => {
@@ -39,9 +39,9 @@ const MainPost = (props: PostType) => {
         <div className={styles.main}>
             <div className={styles.main__textBlock}>
                 <div className={styles.main__textWrapper}>
-                    <p className={styles.main__date}>{props.date}</p>
+                    <p className={styles.main__date}>{props.published_at}</p>
                     <h2 className={styles.main__title}>{props.title}</h2>
-                    <p className={styles.main__text}>{props.text}</p>
+                    <p className={styles.main__text}>{props.summary}</p>
                 </div>
                 <div className={styles.main__textSvg}>
                     <button className={styles.main__wrapperLike}><svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
@@ -54,7 +54,7 @@ const MainPost = (props: PostType) => {
             </div>
             <div className={styles.main__imgBlock}>
                 <div className={styles.main__imgWrapper}>
-                    <img src={props.image} alt={props.image} className={styles.main__img} />
+                    <img src={props.image_url} alt={props.image_url} className={styles.main__img} />
                 </div>
                 <div className={styles.main__imgSvg}>
                     <button className={styles.main__wrapperSaved} onClick={() => handleToggleFavorite(props)}>
