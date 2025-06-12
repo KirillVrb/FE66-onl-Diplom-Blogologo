@@ -27,3 +27,125 @@
 .posts__little {
     width: 30%;
 }
+
+.switchContainer {
+    max-width: 1120px;
+    width: 100%;
+    margin: 50px auto;
+    padding-bottom: 50px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.switchLeft {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.2);
+}
+.switchRight {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+
+}
+.switchWrapperArrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 50px;
+    
+}
+.switchPointer {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+}
+.wrapperPages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.page {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+    cursor: pointer;
+
+    &:hover {
+        color: rgba(108, 27, 219, 1);
+    }
+}
+
+.wrapperPages {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.pageButton {
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: #2D3748; // bg-gray-750
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #4A5568; // bg-gray-500
+  }
+
+  &.active {
+    background-color: #6B46C1; // bg-purple-800
+  }
+}
+
+.ellipsis {
+  padding: 8px 4px;
+  color: white;
+}
+
+.switchLeft, .switchRight {
+  transition: all 0.3s ease;
+  
+  &.hoverable:hover {
+    opacity: 0.8;
+    transform: translateY(-1px);
+    
+    .arrowPath {
+      opacity: 0.8;
+    }
+    
+    .switchPointer {
+      color: #aaa;
+    }
+  }
+  
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+.switchPointer {
+  transition: color 0.3s ease;
+}
+
+.arrowPath {
+  transition: opacity 0.3s ease;
+}

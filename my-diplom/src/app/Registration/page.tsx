@@ -75,6 +75,7 @@ const Registration = () => {
                             <input className={style.passwordInput} id="signInPassword" type="password" placeholder="Your password" value={password} onChange={(e) => setPassword(e.target.value)} />
                         </div>
                         <BigButton value={"Registration"} type="submit" />
+                        <p className="mt-4 text-center text-[16px]">Do you have an account? <Link href="/SignIn" className={style.registrationLink}>Sign In</Link></p>
                     </form> :
                     <form className={style.signInForm} onSubmit={handleActivate}>
                         <div className={style.wrapperEmail}>

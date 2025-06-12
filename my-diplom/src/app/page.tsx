@@ -30,7 +30,7 @@ const mainSwitching = (Component: (props: SwitchType) => JSX.Element) => {
 
 export default function Home() {
   
-  const MainSwitchHOC = mainSwitching(Switching)
+  // const MainSwitchHOC = mainSwitching(Switching)
   const {postsList} = useFetchPosts()
 
   return (
@@ -38,7 +38,7 @@ export default function Home() {
     <Title title={"Blog"} />
       <Tabs />
       <PostsList posts={postsList} />
-      < MainSwitchHOC />
+      {/* < MainSwitchHOC /> */}
       {/* < PostPage posts={postsList} children={undefined} /> */}
     </>
   );

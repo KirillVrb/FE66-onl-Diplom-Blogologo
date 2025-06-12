@@ -37,7 +37,7 @@ const SignIn = () => {
                     <BigButton value={"Sign In"} type="submit"/>
                     {/* <input type="submit" value="Submit"></input>
                     <button type="submit" >Button</button> */}
-                    <p className="mt-4 text-center text-[16px]">If you don't have an account, please <Link href="/Registration" className={style.registrationLink}>Register</Link></p>
+                    <p className="mt-4 text-center text-[16px]">Don’t have an account? <Link href="/Registration" className={style.registrationLink}>Sign Up</Link></p>
 
                 </form>
             </div>

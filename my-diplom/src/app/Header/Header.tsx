@@ -35,7 +35,7 @@ const Header = () => {
                 </Link>
                 <div className={style.headerWrapper}>
                     <button className={style.headerSearch}><SvgSearch /></button>
-                    {profileEmail ? <button className="cursor-pointer" onClick={handleLogout}>
+                    {profileEmail ? <button className={style.burgerLogout} onClick={handleLogout}>
                         <SvgLogout />
                     </button> : <Link href="/SignIn" className={style.headerLogin}>
                     <SvgLogin />
