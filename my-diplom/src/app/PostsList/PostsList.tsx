@@ -6,6 +6,16 @@ import MiddlePost from "../MiddlePost/Middle-post";
 import ImagePost from "../features/imagePost/ImagePost";
 import useFetchPosts from "../useFetchPosts";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { useRouter } from "next/navigation"; // Используем новый navigation из Next.js 13+
+
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+};
 
 const PostsList = (props: PostsType) => {
   const {
@@ -17,6 +27,13 @@ const PostsList = (props: PostsType) => {
     goToPage,
   } = useFetchPosts();
 
+  const router = useRouter();
+
+  // Функция для обработки клика по посту
+  const handlePostClick = (postId: number) => {
+    router.push(`/posts/${postId}`); // Переход на страницу поста
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.posts}>
@@ -24,19 +41,24 @@ const PostsList = (props: PostsType) => {
         <div className={styles.posts__middleWrapper}>
           <div className={styles.posts__middle}>
             {postsList.map((post) => (
-              <MiddlePost 
-                key={post.id} 
-                image_url={post.image_url} 
-                summary={post.summary} 
-                published_at={post.published_at} 
-                title={post.title} 
-                id={post.id} 
-              />
+              <div 
+                key={post.id}
+                onClick={() => handlePostClick(post.id)}
+                className={styles.postItem} // Добавляем стиль для кликабельного элемента
+              >
+                <MiddlePost 
+                  image_url={post.image_url} 
+                  summary={post.summary} 
+                  published_at={formatDate(post.published_at)} 
+                  title={post.title} 
+                  id={post.id} 
+                />
+              </div>
             ))}
           </div>
         </div>
         
-        {/* Пагинация */}
+        {/* Пагинация (остается без изменений) */}
         <div className={styles.switchContainer}>
           <button 
             className={`${styles.switchLeft} ${currentPage !== 1 ? styles.hoverable : ''}`} 

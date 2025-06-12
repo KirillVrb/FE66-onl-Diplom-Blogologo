@@ -1,0 +1,20 @@
+.container {
+  padding-top: 72px;
+  max-width: 1120px;
+  margin: 0 auto;
+  // padding: 2rem;
+}
+
+.loading, .error, .notFound {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+.notFound {
+  color: #666;
+}

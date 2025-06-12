@@ -21,6 +21,7 @@
         > div { 
             flex: 0 0 calc(32%); // Три элемента в ряд с учетом отступа
             box-sizing: border-box;
+            max-width: 352px;
         }
     }
 }
@@ -148,4 +149,14 @@
 
 .arrowPath {
   transition: opacity 0.3s ease;
+}
+
+.postItem {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
 }
