@@ -1,0 +1,115 @@
+.postPost {
+    max-width: 1000px;
+    width: 100%;
+    margin: 50px auto;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 50px;
+}
+.switchContainer {
+    max-width: 1120px;
+    width: 100%;
+    margin: 50px auto;
+    padding-bottom: 50px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.switchLeft {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.2);
+}
+.switchRight {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+
+}
+.switchWrapperArrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 50px;
+    
+}
+.switchPointer {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+}
+.wrapperPages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.page {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+    cursor: pointer;
+
+    &:hover {
+        color: rgba(108, 27, 219, 1);
+    }
+}
+.loading {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 1rem;
+  text-align: center;
+}
+
+.error {
+  color: #ff6b6b;
+  padding: 1rem;
+  text-align: center;
+}
+
+.pageInfo {
+  padding: 0 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.switchLeft, .switchRight {
+  transition: all 0.3s ease;
+  
+  &.hoverable:hover {
+    opacity: 0.8;
+    transform: translateY(-1px);
+    
+    .arrowPath {
+      opacity: 0.8;
+    }
+    
+    .switchPointer {
+      color: #aaa;
+    }
+  }
+  
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+.switchPointer {
+  transition: color 0.3s ease;
+}
+
+.arrowPath {
+  transition: opacity 0.3s ease;
+}

@@ -1,0 +1,40 @@
+.postDate {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.postWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.post__imgWrapper {
+    width: 100%;
+    overflow: hidden;
+    max-width: 1120px;
+    max-height: 518px;
+    border-radius: 15px;
+}
+
+.post__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post__text {
+    padding: 0 40px;
+}
+
+.postBtns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 530px;
+    padding: 0 40px;
+}

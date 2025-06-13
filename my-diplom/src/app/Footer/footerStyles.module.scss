@@ -1,0 +1,33 @@
+.footerContainer {
+    max-width: 1120px;
+    width: 100%;
+    margin: 50px auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.footerIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 22px;
+    height: 22px;
+}
+
+.footerText {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.1);
+}

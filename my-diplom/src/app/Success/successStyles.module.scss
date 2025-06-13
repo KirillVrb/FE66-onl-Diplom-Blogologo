@@ -1,0 +1,31 @@
+.successContainer {
+    max-width: 1000px;
+    width: 100%;
+    margin: 50px auto;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 50px;
+}
+
+.successLinkBack {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.successForm {
+    margin: 50px auto 200px;
+    width: 50%;
+    padding: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.successText {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+
+    &:last-of-type{
+       margin-bottom: 40px; 
+    }
+}

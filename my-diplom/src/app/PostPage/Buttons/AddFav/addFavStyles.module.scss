@@ -1,0 +1,25 @@
+.wrapperAddBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.wrapperSvg {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnText {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+}

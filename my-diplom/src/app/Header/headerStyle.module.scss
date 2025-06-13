@@ -1,0 +1,169 @@
+.headerContainer {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.headerBurger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    cursor: pointer;
+
+    &LineUp,
+    &LineMiddle,
+    &LineDown {
+        width: 20px;
+        border-bottom: 2px solid #ffffff;
+        margin-bottom: 5px;
+        transition: all 0.3s ease;
+    }
+
+    &LineDown {
+        margin-bottom: 0;
+    }
+}
+
+.crossUp {
+    transform: rotate(45deg);
+    position: relative;
+    top: 4px;
+}
+
+.crossDown {
+    transform: rotate(-45deg);
+    position: relative;
+    bottom: 3px;
+}
+
+.hidden {
+    display: none;
+}
+
+.headerWrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.headerSearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    padding: 48px 15px;
+    cursor: pointer;
+    border-right: 1px solid rgba(49, 48, 55, 1);
+}
+
+.headerLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 65px;
+    max-height: 56px;
+    padding: 48px 15px;
+    // border-left: 1px solid rgba(49, 48, 55, 1);
+    cursor: pointer;
+    
+}
+
+.burgerProfile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    // background-color: #3d21b0;
+    padding: 7px 11px;
+    font-size: 16px;
+    line-height: 34px;
+    font-weight: 600;
+    color: #ffffff;
+    // border: 1px solid #ffffff;
+
+}
+
+.burgerLogout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 7px 10px;
+    font-size: 16px;
+    line-height: 34px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+
+    svg {
+      height: 30px;
+      width: 30px;
+    }
+
+}
+
+.burgerInitials {
+    padding: 7px 13px;
+    background-color: rgb(148, 126, 235)
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.searchInput {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+  // width: 780px;
+
+  &:focus {
+    outline: none;
+    border-color: #6B46C1;
+  }
+}
+
+.headerSearch {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+// Адаптивные стили
+@media (max-width: 768px) {
+  .searchForm {
+    margin-right: 10px;
+  }
+  
+  .searchInput {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .searchInput {
+    width: 120px;
+    padding: 6px 10px;
+  }
+}
