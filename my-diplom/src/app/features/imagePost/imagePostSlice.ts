@@ -1,4 +1,4 @@
-// import { PostType } from '@/app/types'
+
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
@@ -15,12 +15,6 @@ export const imagePostSlice = createSlice({
     closeSelectedImg: (state) => {
         state.selectedImg = null
         },
-    // toggleFavorites: (state, action) => {
-    //   const post = state.posts.find((post) => post.id === action.payload);
-    //   if(post) {
-    //     post.isFavorite = !post.isFavorite
-    //   }
-    // }
   },
 })
 

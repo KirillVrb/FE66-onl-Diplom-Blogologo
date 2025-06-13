@@ -5,7 +5,7 @@ type TitleType = {
     title: string
 }
 
-const Title = (props: TitleType) => {   // (props: {title: string})
+const Title = (props: TitleType) => { 
     return (
         <h1 className={style.title}>{props.title}</h1>
     )

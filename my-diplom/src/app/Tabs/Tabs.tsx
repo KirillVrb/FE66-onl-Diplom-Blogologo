@@ -5,8 +5,7 @@ const Tabs = () => {
     return (
         <div className={style.tabsContainer}>
             <Link href="/" className={style.tabsAll}>Articles</Link>
-            <Link href="/MyFavorites" className={style.tabsFavorites}>News</Link>
-            {/* <Link href="/PostPage" className={style.tabsPopular}>PostPage</Link> */}
+            <Link href="/" className={style.tabsFavorites}>News</Link>
         </div>
     )
 }

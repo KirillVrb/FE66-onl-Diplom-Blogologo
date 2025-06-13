@@ -1,9 +1,8 @@
 .headerContainer {
-    max-width: 1440px;
+    max-width: 1920px;
     width: 100%;
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.2);
-
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -128,7 +127,7 @@
   margin-right: 8px;
   font-size: 14px;
   transition: border-color 0.3s ease;
-  width: 980px;
+  // width: 780px;
 
   &:focus {
     outline: none;

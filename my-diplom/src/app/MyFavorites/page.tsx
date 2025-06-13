@@ -27,7 +27,7 @@ const MyFavorites = () => {
                 <h2 className={style.favorites__title}>My Favorites</h2>
                 {favorites.map((post: PostType) => (
                     <div key={post.id} className={style.favorites__block}>
-                        <img src={post.image} className={style.favorites__blockImg}/>
+                        <img src={post.image_url} className={style.favorites__blockImg}/>
                         <h3 className={style.favorites__blockTitle}>{post.title}</h3>
                     </div>
                 ))}

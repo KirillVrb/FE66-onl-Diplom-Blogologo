@@ -1,5 +1,4 @@
 import { ACTIVATION_PATH, BLOG_PATH, LOGIN_PATH, ME_PATH, URL_API, USER_PATH } from '@/app/consts';
-import { PostType } from '@/app/types';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 type InitialStateType = {
@@ -120,11 +119,9 @@ const profileSlice = createSlice({
         console.log("fulfilled", action)
       })
       .addCase(login.pending, (state, action) => {
-        // state.posts = action.payload.results;
         console.log("pending")
       })
       .addCase(login.rejected, (state, action) => {
-        // state.posts = action.payload.results;
         console.log("rejected")
       })
       .addCase(getUser.fulfilled, (state, action) => {
@@ -136,7 +133,6 @@ const profileSlice = createSlice({
         console.log("register")
       })
       .addCase(register.pending, (state, action) => {
-        // state.email = action.payload.email;
         console.log("register pending")
       })
       .addCase(register.rejected, (state, action) => {

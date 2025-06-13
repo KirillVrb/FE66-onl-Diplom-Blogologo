@@ -5,20 +5,10 @@ import { useAppDispatch, useAppSelector } from "../hooks"
 import { addFavorite, fetchPosts, removeFavorite } from "../features/favoritesPosts/favoritesPosts"
 import { useEffect } from "react"
 
-// type PostType = {
-//     id?: number
-//     image: string
-//     text: string
-//     date: string
-//     lesson_num?: number
-//     title: string
-//     author?: number
-// }
 
 const MainPost = (props: PostType) => {
     const dispatch = useAppDispatch();
 
-    // const posts = useAppSelector((state: any) => state.favoritesPosts.posts);
     const favorites = useAppSelector((state: any) => state.favoritesPosts.favorites);
 
     useEffect(() => {

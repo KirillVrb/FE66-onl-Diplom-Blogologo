@@ -2,7 +2,6 @@
 
 import style from "./imagePostStyles.module.scss"
 import { closeSelectedImg } from "./imagePostSlice"
-import { RootState } from "@/app/store"
 import { useAppDispatch, useAppSelector } from "@/app/hooks"
 
 const ImagePost = () => {

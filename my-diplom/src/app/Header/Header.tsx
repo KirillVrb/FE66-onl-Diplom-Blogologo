@@ -6,7 +6,6 @@ import style from "./headerStyle.module.scss"
 import SvgLogin from "./SVG/SvgLogin"
 import SvgSearch from "./SVG/SvgSearch"
 import SvgLogo from "./SVG/SvgLogo"
-import BurgerMenu from "./BurgerMenu/BurgerMenu"
 import { useState } from "react"
 import { useAppDispatch, useAppSelector } from "../hooks"
 import SvgLogout from "./SVG/SvgLogout"
@@ -68,7 +67,6 @@ const Header = () => {
                     )}
                 </div>
             </div>
-            {openMenu && <BurgerMenu />}
         </>
     )
 }

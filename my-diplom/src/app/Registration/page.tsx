@@ -46,22 +46,8 @@ const Registration = () => {
             <div className={style.signInContainer}>
                 <Link href="/" className={style.signInLinkBack}>Back to home</Link>
                 <Title title={"Registration"} />
-                {/* <form className={style.signInForm}>
-                    <div className={style.wrapperEmail}>
-                        <label className={style.emailLabel} htmlFor="signInEmail">Email</label>
-                        <input className={style.emailInput} id="signInEmail" type="email" placeholder="Your email" />
-                    </div>
-                    <div className={style.wrapperPassword}>
-                        <label className={style.passwordLabel} htmlFor="signInPassword">Password</label>
-                        <input className={style.passwordInput} id="signInPassword" type="password" placeholder="Your password" />
-                    </div>
-                    <a className={style.signInForgot} href="#">Forgot password?</a>
-                    <Link href="/Success"><BigButton value={"Sign In"} /></Link>
-                    
-                </form> */}
                 {!isActivationNeeded ?
                     <form className={style.signInForm} onSubmit={handleLogin}>
-                    {/* <form className={style.signInForm} onSubmit={handleRedirect}> */}
                         <div className={style.wrapperEmail}>
                             <label className={style.emailLabel} htmlFor="signInUser">User Name</label>
                             <input className={style.emailInput} id="signInUser" type="text" placeholder="Your name" value={username} onChange={(e) => setUsername(e.target.value)} />
