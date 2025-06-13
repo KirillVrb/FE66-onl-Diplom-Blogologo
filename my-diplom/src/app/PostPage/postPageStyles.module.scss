@@ -80,19 +80,6 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
-// .switchLeft, .switchRight {
-//   transition: opacity 0.2s ease;
-  
-//   &:disabled {
-//     cursor: not-allowed;
-//     opacity: 0.5;
-//   }
-  
-//   &:not(:disabled):hover {
-//     opacity: 0.8;
-//   }
-// }
-
 .switchLeft, .switchRight {
   transition: all 0.3s ease;
   

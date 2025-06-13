@@ -1,12 +1,16 @@
 
 import styles from "./posts-list_styles.module.scss";
 import { PostsType } from "../types";
-import MainPost from "../MainPost/Main-post";
 import MiddlePost from "../MiddlePost/Middle-post";
 import ImagePost from "../features/imagePost/ImagePost";
 import useFetchPosts from "../useFetchPosts";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import { useRouter } from "next/navigation"; // Используем новый navigation из Next.js 13+
+import { useRouter } from "next/navigation";
+import { useState, useMemo } from "react";
+import { SortingControls } from "../Sorting/SortingControls";
+
+
+export type TimeFilter = 'day' | 'week' | 'month' | 'year' | 'all';
+export type SortOrder = 'title-asc' | 'title-desc';
 
 const formatDate = (dateString: string) => {
   const date = new Date(dateString);
@@ -28,23 +32,59 @@ const PostsList = (props: PostsType) => {
   } = useFetchPosts();
 
   const router = useRouter();
+  const [timeFilter, setTimeFilter] = useState<TimeFilter>('all');
+  const [sortOrder, setSortOrder] = useState<SortOrder>('title-asc');
 
-  // Функция для обработки клика по посту
   const handlePostClick = (postId: number) => {
-    router.push(`/posts/${postId}`); // Переход на страницу поста
+    router.push(`/posts/${postId}`);
   };
+
+  const filterByTime = (post: any) => {
+    const now = new Date();
+    const postDate = new Date(post.published_at);
+    const diffTime = now.getTime() - postDate.getTime();
+    const diffDays = diffTime / (1000 * 60 * 60 * 24);
+
+    switch (timeFilter) {
+      case 'day': return diffDays <= 1;
+      case 'week': return diffDays <= 7;
+      case 'month': return diffDays <= 30;
+      case 'year': return diffDays <= 365;
+      default: return true;
+    }
+  };
+
+  const sortPosts = (a: any, b: any) => {
+    if (sortOrder === 'title-asc') {
+      return a.title.localeCompare(b.title);
+    } else {
+      return b.title.localeCompare(a.title);
+    }
+  };
+
+  const processedPosts = useMemo(() => {
+    return [...postsList]
+      .filter(filterByTime)
+      .sort(sortPosts);
+  }, [postsList, timeFilter, sortOrder]);
 
   return (
     <div className={styles.container}>
       <div className={styles.posts}>
+        <div className={styles.sortContainer}>
+          <SortingControls 
+          onTimeFilterChange={setTimeFilter}
+          onSortOrderChange={setSortOrder}
+      />
+        </div>
         <ImagePost />
         <div className={styles.posts__middleWrapper}>
           <div className={styles.posts__middle}>
-            {postsList.map((post) => (
+            {processedPosts.map((post) => (
               <div 
                 key={post.id}
                 onClick={() => handlePostClick(post.id)}
-                className={styles.postItem} // Добавляем стиль для кликабельного элемента
+                className={styles.postItem}
               >
                 <MiddlePost 
                   image_url={post.image_url} 
@@ -57,16 +97,15 @@ const PostsList = (props: PostsType) => {
             ))}
           </div>
         </div>
-        
-        {/* Пагинация (остается без изменений) */}
+
         <div className={styles.switchContainer}>
-          <button 
+           <button 
             className={`${styles.switchLeft} ${currentPage !== 1 ? styles.hoverable : ''}`} 
             onClick={() => goToPage(currentPage - 1)} 
             disabled={currentPage === 1}
           >
             <div className={styles.switchWrapperArrow}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 16 16" fill="none" >
                 <path className={styles.arrowPath} fill="rgba(255, 255, 255, 0.2)" d="M7.765 4.045a.75.75 0 10-1.03-1.09L2.237 7.203a.748.748 0 00-.001 1.093l4.499 4.25a.75.75 0 001.03-1.091L4.636 8.5h8.614a.75.75 0 000-1.5H4.636l3.129-2.955z" />
               </svg>
             </div>

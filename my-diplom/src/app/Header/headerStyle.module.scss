@@ -51,7 +51,6 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    column-gap: 5px;
 }
 
 .headerSearch {
@@ -69,11 +68,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 56px;
+    max-width: 65px;
     max-height: 56px;
     padding: 48px 15px;
     // border-left: 1px solid rgba(49, 48, 55, 1);
     cursor: pointer;
+    
 }
 
 .burgerProfile {
@@ -101,10 +101,70 @@
     line-height: 34px;
     font-weight: 600;
     color: #ffffff;
+    cursor: pointer;
+
+    svg {
+      height: 30px;
+      width: 30px;
+    }
 
 }
 
 .burgerInitials {
     padding: 7px 13px;
     background-color: rgb(148, 126, 235)
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.searchInput {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+  width: 980px;
+
+  &:focus {
+    outline: none;
+    border-color: #6B46C1;
+  }
+}
+
+.headerSearch {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+// Адаптивные стили
+@media (max-width: 768px) {
+  .searchForm {
+    margin-right: 10px;
+  }
+  
+  .searchInput {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .searchInput {
+    width: 120px;
+    padding: 6px 10px;
+  }
 }

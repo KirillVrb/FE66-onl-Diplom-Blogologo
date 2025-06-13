@@ -1,20 +1,30 @@
-import style from "./bigButtonStyles.module.scss"
-import { ButtonHTMLAttributes } from "react"
+"use client";
+
+import style from "./bigButtonStyles.module.scss";
+import { ButtonHTMLAttributes } from "react";
+import { useRouter } from "next/navigation";
 
 type ValueButtonType = {
-    value: string
-} & ButtonHTMLAttributes<HTMLButtonElement>
+    value: string;
+} & ButtonHTMLAttributes<HTMLButtonElement>;
 
 const BigButton = (props: ValueButtonType) => {
-    return (
-        <button type={props.type} className={style.bigButton} onClick={(e) => {
-            props.onClick?.(e)
-            // if(props.onClick) {
-            //     props.onClick()
-            // }
-        }}>{props.value}
-        </button>
-    )
-}
+    const router = useRouter();
 
-export default BigButton
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        props.onClick?.(e); // Вызываем оригинальный обработчик, если он есть
+        router.push("/"); // Переход на главную страницу
+    };
+
+    return (
+        <button 
+            type={props.type} 
+            className={style.bigButton} 
+            onClick={handleClick}
+        >
+            {props.value}
+        </button>
+    );
+};
+
+export default BigButton;
