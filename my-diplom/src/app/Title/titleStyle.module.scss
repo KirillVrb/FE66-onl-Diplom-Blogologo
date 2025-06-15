@@ -1,0 +1,12 @@
+.title {
+    max-width: 1120px;
+    width: 100%;
+    margin: 32px auto 72px;
+
+    font-size: 56px;
+    line-height: 80px;
+    font-weight: 700;
+    @media (max-width: 768px){
+        padding: 0px 40px;
+        }
+}

@@ -1,0 +1,44 @@
+.image__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    max-width: 90%;
+    max-height: 90%;
+
+    &__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 20px;
+        cursor: pointer;
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+    }
+
+    &__crossUp {
+        width: 40px;
+        border-bottom: 3px solid #ffffff;
+        margin-bottom: 5px;
+        transform: rotate(45deg);
+        position: relative;
+        top: 4px;
+    }
+
+    &__crossDown {
+        width: 40px;
+        border-bottom: 3px solid #ffffff;
+        margin-bottom: 5px;
+        transform: rotate(-45deg);
+        position: relative;
+        bottom: 4px;
+    }
+}

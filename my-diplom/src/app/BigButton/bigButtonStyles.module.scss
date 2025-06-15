@@ -1,0 +1,17 @@
+.bigButton {
+    min-width: 300px;
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    background-color: rgba(108, 27, 219, 1);
+    border-radius: 10px;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #ffffff;
+    cursor: pointer;
+
+    &:hover {
+    background-color: rgb(0, 17, 255);
+  }
+}

@@ -1,0 +1,223 @@
+.container {
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.posts {
+    width: 100%;
+    &__middleWrapper {
+        display: flex;
+    }
+    &__middle {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+        width: 100%;
+        > div { 
+            flex: 0 0 calc(32%); // Три элемента в ряд с учетом отступа
+            box-sizing: border-box;
+            max-width: 352px;
+        }
+        @media (max-width: 768px){
+        padding: 0px 40px;
+        }
+    }
+}
+.posts__little {
+    width: 30%;
+}
+
+.switchContainer {
+    max-width: 1120px;
+    width: 100%;
+    margin: 50px auto;
+    padding-bottom: 50px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 768px){
+        padding-left: 40px;
+        padding-right: 40px;
+        }
+}
+.switchLeft {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.2);
+}
+.switchRight {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+
+}
+.switchWrapperArrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 24px;
+    
+}
+.switchPointer {
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 400;
+}
+.wrapperPages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.page {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+    cursor: pointer;
+
+    &:hover {
+        color: rgba(108, 27, 219, 1);
+    }
+}
+
+.wrapperPages {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.pageButton {
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: #2D3748; // bg-gray-750
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #4A5568; // bg-gray-500
+  }
+
+  &.active {
+    background-color: #6B46C1; // bg-purple-800
+  }
+}
+
+.ellipsis {
+  padding: 8px 4px;
+  color: white;
+}
+
+.switchLeft, .switchRight {
+  transition: all 0.3s ease;
+  
+  &.hoverable:hover {
+    opacity: 0.8;
+    transform: translateY(-1px);
+    
+    .arrowPath {
+      opacity: 0.8;
+    }
+    
+    .switchPointer {
+      color: #aaa;
+    }
+  }
+  
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+.switchPointer {
+  transition: color 0.3s ease;
+}
+
+.arrowPath {
+  transition: opacity 0.3s ease;
+}
+
+.postItem {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+.sortContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+  border-radius: 8px;
+  column-gap: 673px;
+  @media (max-width: 768px){
+        padding: 0px 40px;
+        }
+}
+.sortingContainer {
+  max-width: 1120px;
+    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.timeFilters {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.timeFilterButton {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 0.9rem;
+
+  &:hover {
+    background-color: #d0d0d0;
+  }
+
+  &.active {
+    background-color: #6B46C1; // bg-purple-800
+    color: white;
+  }
+}
+
+.sortSelector {
+  display: flex;
+  align-items: center;
+}
+
+.sortSelect {
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
