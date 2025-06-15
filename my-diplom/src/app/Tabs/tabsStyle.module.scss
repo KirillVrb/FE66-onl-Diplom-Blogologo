@@ -3,10 +3,12 @@
     width: 100%;
     margin: 50px auto;
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    @media (max-width: 768px){
+        padding: 0px 10px;
+        }
 }
 
 .tabsAll,

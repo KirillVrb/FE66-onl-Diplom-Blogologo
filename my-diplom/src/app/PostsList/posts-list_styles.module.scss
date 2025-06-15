@@ -21,6 +21,9 @@
             box-sizing: border-box;
             max-width: 352px;
         }
+        @media (max-width: 768px){
+        padding: 0px 40px;
+        }
     }
 }
 .posts__little {
@@ -37,6 +40,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 768px){
+        padding-left: 40px;
+        padding-right: 40px;
+        }
 }
 .switchLeft {
     display: flex;
@@ -165,6 +172,9 @@
   margin-bottom: 4rem;
   border-radius: 8px;
   column-gap: 673px;
+  @media (max-width: 768px){
+        padding: 0px 40px;
+        }
 }
 .sortingContainer {
   max-width: 1120px;
